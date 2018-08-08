@@ -1,6 +1,6 @@
 # pilot
 
-> pilot project
+> TODOS with VueJS project
 
 ## Build Setup
 
