@@ -2,10 +2,6 @@ const STORAGE_KEY = 'todos-vuejs-2.0';
 
 export function fetch () {
   var todos = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-  todos.forEach(function (todo, index) {
-    todo.id = index;
-  });
-  todos.uid = todos.length;
   return todos;
 }
 

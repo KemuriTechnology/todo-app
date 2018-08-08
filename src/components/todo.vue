@@ -12,9 +12,9 @@
     <section class="main" v-show="todos.length" v-cloak>
       <input class="toggle-all" type="checkbox" v-model="allDone">
       <ul class="todo-list">
-        <li v-for="todo in filteredTodos"
+        <li v-for="(todo, index) in filteredTodos"
             class="todo"
-            :key="todo.id"
+            :key="index"
             :class="{ completed: todo.completed, editing: todo === editedTodo }">
           <div class="view">
             <input class="toggle" type="checkbox" v-model="todo.completed">
@@ -23,7 +23,7 @@
           </div>
           <input class="edit" type="text"
                  v-model="todo.title"
-                 v-todo-focus="todo == editedTodo"
+                 v-todo-focus="todo === editedTodo"
                  @blur="doneEdit(todo)"
                  @keyup.enter="doneEdit(todo)"
                  @keyup.esc="cancelEdit(todo)">
@@ -105,7 +105,6 @@ export default {
         return;
       }
       this.todos.push({
-        id: localStorage.uid++,
         title: value,
         completed: false
       });
