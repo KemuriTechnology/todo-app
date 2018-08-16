@@ -1,7 +1,7 @@
 {
   "name": "pilot",
   "version": "1.0.0",
-  "description": "pilot project",
+  "description": "A Vue.js project",
   "author": "akshay <akshay@kemuri.in>",
   "private": true,
   "scripts": {
@@ -10,11 +10,9 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
-    "lint:fix": "eslint src --fix --ext .js,.vue",
     "build": "node build/build.js"
   },
   "dependencies": {
-    "todomvc-app-css": "^2.1.2",
     "vue": "^2.5.2"
   },
   "devDependencies": {
@@ -60,7 +58,7 @@
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
-    "url-loader": "^1.0.1",
+    "url-loader": "^0.5.8",
     "vue-jest": "^1.0.2",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
